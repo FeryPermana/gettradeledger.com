@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+    # Menyesuaikan dengan APP_URL di .env backend
+    ports:
+      - "14022:14022" 
+    volumes:
+      - ./backend:/app
+    environment:
+      # Memastikan backend tahu di mana mencari DB & Redis
+      - DB_HOST=mysql
+      - REDIS_HOST=redis
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - tradeledger_net
+
+  frontend:
+    build: 
+      context: ./frontend
+    ports:
+      - "5173:5173" 
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules 
+    environment:
+      - CHOKIDAR_USEPOLLING=true 
+    networks:
+      - tradeledger_net
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: tradeledger
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes' # Sesuai dengan DB_PASSWORD yang kosong
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - tradeledger_net
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - tradeledger_net
+
+networks:
+  tradeledger_net:
+    driver: bridge
+
+volumes:
+  mysql_data:

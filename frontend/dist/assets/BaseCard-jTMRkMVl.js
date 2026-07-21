@@ -1,0 +1,1 @@
+import{z as s,o as a,c as o,S as r}from"./index-D5-pXJJV.js";const c={},t={class:"base-card rounded-2xl p-5"};function n(e,d){return a(),o("div",t,[r(e.$slots,"default",{},void 0,!0)])}const l=s(c,[["render",n],["__scopeId","data-v-30a3e520"]]);export{l as B};

@@ -1,0 +1,1 @@
+function e(n,t="IDR"){const r=Number(n||0);return t==="IDR"?new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(r):t==="USD"?new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:2}).format(r):`${r}`}export{e as f};

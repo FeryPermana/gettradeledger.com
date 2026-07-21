@@ -1,0 +1,1 @@
+const a=[{value:"scalping",label:"Scalping"},{value:"intra_day",label:"Intra Day"},{value:"swing",label:"Swing"},{value:"investment",label:"Investment"},{value:"mix",label:"Mix"}],l=[{value:"IDR",label:"IDR"},{value:"USD",label:"USD"}];export{l as A,a};
