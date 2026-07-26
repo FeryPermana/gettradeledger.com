@@ -281,16 +281,6 @@ php artisan test --parallel
 
 ---
 
-# 📚 Documentation
-
-- Docker Development
-- Docker Production
-- REST API Documentation
-- Deployment Guide
-- Contribution Guide
-
----
-
 # 🤝 Contributing
 
 Contributions are welcome.
