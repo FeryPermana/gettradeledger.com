@@ -186,7 +186,7 @@ gettradeledger.com
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/gettradeledger.com.git
+git clone https://github.com/FeryPermana/gettradeledger.com.git
 
 cd gettradeledger.com
 ```
@@ -218,15 +218,6 @@ http://localhost:14022
 ```bash
 docker compose -f docker-compose.prod.yml up -d
 ```
-
----
-
-# 🐳 Docker Documentation
-
-| Environment | Documentation |
-|-------------|---------------|
-| Development | docs/docker-development.md |
-| Production | docs/docker-production.md |
 
 ---
 
