@@ -1,69 +1,149 @@
-# 📈 TradeLedger
+<p align="center">
+    <img src="docs/images/logo.png" width="140" alt="TradeLedger Logo">
+</p>
 
-> Modern Investment & Trading Portfolio Management Platform built with Laravel and Vue.js.
+<h1 align="center">📈 TradeLedger</h1>
 
-TradeLedger is a full-stack web application designed to help investors and traders manage their portfolios, monitor performance, record trades, analyze investments, and build long-term wealth with comprehensive financial insights.
+<p align="center">
+Modern Investment & Trading Portfolio Management Platform
+</p>
+
+<p align="center">
+Manage portfolios, record trades, analyze investments, and build long-term wealth in one place.
+</p>
+
+<p align="center">
+
+![Laravel](https://img.shields.io/badge/Laravel-12-red)
+![Vue](https://img.shields.io/badge/Vue-3-42b883)
+![PHP](https://img.shields.io/badge/PHP-8.2-777BB4)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+</p>
 
 ---
 
-## ✨ Features
+# ✨ Core Features
 
-### 🔐 Authentication
-- User Registration & Login
-- Email Verification
-- Password Reset
-- Laravel Sanctum Authentication
+## 📊 Dashboard
 
-### 💼 Portfolio Management
-- Create Manual Portfolio
-- Trade Synced Portfolio
-- Portfolio Allocation
-- Portfolio Summary
-- Unrealized Profit & Loss
-- Multi Account Support
-- Multi Currency Support
+Monitor your investment performance, portfolio value, profit & loss, market summary, and asset allocation from one place.
 
-### 📊 Trading Journal
-- Trade History
-- Win Rate Analysis
-- Risk Reward Analysis
-- Trade Performance
-- Position Tracking
-- Partial Close
+### 💻 Desktop
 
-### 💰 Investment Analytics
-- Portfolio Value
-- Current Market Value
-- Average Cost
-- Total Investment
-- Gain / Loss
-- Asset Allocation
-- Category Allocation
+<p align="center">
+    <img src="docs/images/dashboard-desktop-1.png" width="100%">
+</p>
 
-### 💱 Currency Converter
-- Multi Currency Portfolio
-- Automatic Currency Conversion
-- Base Currency Support
+<p align="center">
+    <img src="docs/images/dashboard-desktop-2.png" width="100%">
+</p>
 
-### 📈 Price Management
-- Manual Price Update
-- Automatic Price Sync (Premium)
-- Last Price Update Tracking
+### 📱 Mobile
 
-### 👑 Premium Membership
-- Manual Payment Verification
-- Multiple Subscription Plans
-- Premium Expiration
-- Payment Management
-- Admin Approval System
+<p align="center">
+    <img src="docs/images/dashboard-mobile-1.png" width="280">
+    &nbsp;&nbsp;
+    <img src="docs/images/dashboard-mobile-2.png" width="280">
+</p>
 
-### 🛡 Security
-- Authentication
-- Authorization
-- Request Validation
-- API Resource Protection
-- Transaction Handling
-- Database Integrity
+---
+
+## 💼 Portfolio Management
+
+Manage multiple portfolios, monitor allocations, average cost, unrealized profit & loss, and investment growth.
+
+### 💻 Desktop
+
+<p align="center">
+    <img src="docs/images/portfolio-desktop-1.png" width="100%">
+</p>
+
+<p align="center">
+    <img src="docs/images/portfolio-desktop-2.png" width="100%">
+</p>
+
+### 📱 Mobile
+
+<p align="center">
+    <img src="docs/images/portfolio-mobile-1.png" width="180">
+    <img src="docs/images/portfolio-mobile-2.png" width="180">
+    <img src="docs/images/portfolio-mobile-3.png" width="180">
+    <img src="docs/images/portfolio-mobile-4.png" width="180">
+</p>
+
+---
+
+## 📈 Trading Journal
+
+Track every trade, monitor open positions, evaluate win rate, and analyze trading performance.
+
+### 💻 Desktop
+
+<p align="center">
+    <img src="docs/images/trades-desktop-1.png" width="100%">
+</p>
+
+### 📱 Mobile
+
+<p align="center">
+    <img src="docs/images/trades-mobile-1.png" width="280">
+    &nbsp;&nbsp;
+    <img src="docs/images/trades-mobile-2.png" width="280">
+</p>
+
+---
+
+## 📊 Investment Analytics
+
+Analyze portfolio performance, allocation, gain/loss, investment growth, and financial insights.
+
+### 💻 Desktop
+
+<p align="center">
+    <img src="docs/images/analytics-desktop.png" width="100%">
+</p>
+
+### 📱 Mobile
+
+<p align="center">
+    <img src="docs/images/analytics-mobile.png" width="320">
+</p>
+
+---
+
+## 👑 Premium Membership
+
+Unlock premium investment features with subscription management and payment verification.
+
+### 💻 Desktop
+
+<p align="center">
+    <img src="docs/images/premium-desktop.png" width="100%">
+</p>
+
+### 📱 Mobile
+
+<p align="center">
+    <img src="docs/images/premium-mobile.png" width="320">
+</p>
+
+---
+
+# 🏗 System Architecture
+
+```text
+                   Vue.js 3 + Vite
+                          │
+                     REST API
+                          │
+                  Laravel 12 Backend
+                          │
+        ┌─────────────────┴─────────────────┐
+        │                                   │
+      MySQL                              Redis
+```
 
 ---
 
@@ -71,12 +151,11 @@ TradeLedger is a full-stack web application designed to help investors and trade
 
 ## Backend
 
-- PHP 8.x
+- PHP 8.2
 - Laravel 12
 - MySQL
 - Laravel Sanctum
 - PHPUnit
-- Docker
 
 ## Frontend
 
@@ -92,13 +171,13 @@ TradeLedger is a full-stack web application designed to help investors and trade
 - Docker
 - Docker Compose
 - Nginx
-- GitHub Actions *(planned)*
+- GitHub Actions *(Planned)*
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 gettradeledger.com
 │
 ├── backend
@@ -112,6 +191,7 @@ gettradeledger.com
 │   ├── src
 │   ├── public
 │   └── ...
+│
 │
 ├── docker-compose.yml
 └── README.md
@@ -131,16 +211,10 @@ cd gettradeledger.com
 
 ---
 
-## Run with Docker
+## Development
 
 ```bash
-docker compose up -d --build
-```
-
-Backend
-
-```
-http://localhost:8000
+docker compose up -d
 ```
 
 Frontend
@@ -149,61 +223,32 @@ Frontend
 http://localhost:5173
 ```
 
-MySQL
-
-```
-localhost:3307
-```
-
----
-
-## Backend Setup
-
-```bash
-cd backend
-
-cp .env.example .env
-
-composer install
-
-php artisan key:generate
-
-php artisan migrate
-
-php artisan storage:link
-```
-
----
-
-## Frontend Setup
-
-```bash
-cd frontend
-
-npm install
-
-npm run dev
-```
-
----
-
-# 🧪 Running Tests
-
 Backend
 
-```bash
-php artisan test
 ```
-
-or
-
-```bash
-php artisan test --parallel
+http://localhost:14022
 ```
 
 ---
 
-# 📦 API
+## Production
+
+```bash
+docker compose -f docker-compose.prod.yml up -d
+```
+
+---
+
+# 🐳 Docker Documentation
+
+| Environment | Documentation |
+|-------------|---------------|
+| Development | docs/docker-development.md |
+| Production | docs/docker-production.md |
+
+---
+
+# 📦 REST API
 
 TradeLedger provides RESTful APIs for:
 
@@ -213,39 +258,71 @@ TradeLedger provides RESTful APIs for:
 - Accounts
 - Trades
 - Analytics
-- Payment
 - Premium Membership
+- Payments
 - Currency Conversion
 
 ---
 
-# 📌 Roadmap
+# 🧪 Testing
+
+Run all tests
+
+```bash
+php artisan test
+```
+
+Run tests in parallel
+
+```bash
+php artisan test --parallel
+```
+
+---
+
+# 🗺 Roadmap
+
+## Version 1.0
 
 - [x] Authentication
 - [x] Portfolio Management
 - [x] Trading Journal
-- [x] Analytics Dashboard
+- [x] Investment Analytics
 - [x] Multi Currency
 - [x] Premium Membership
 - [x] Docker Support
+
+## Version 1.5
+
 - [ ] Dividend Module
+- [ ] Dividend Calendar
 - [ ] Watchlist
 - [ ] Stock Screener
-- [ ] Notification System
-- [ ] Automatic Price Sync
-- [ ] Dividend Calendar
+
+## Version 2.0
+
 - [ ] Portfolio Rebalancing
+- [ ] AI Investment Assistant
+- [ ] Automatic Price Sync
 - [ ] Mobile Application
+
+---
+
+# 📚 Documentation
+
+- Docker Development
+- Docker Production
+- REST API Documentation
+- Deployment Guide
+- Contribution Guide
 
 ---
 
 # 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome.
+Contributions are welcome.
 
-Please create a feature branch before submitting a pull request.
-
-```
+```bash
 feature/new-feature
 ```
 
@@ -261,10 +338,10 @@ This project is licensed under the MIT License.
 
 **Muhammad Pandi Ferry Permana**
 
-Software Engineer | Backend Developer | Investment Enthusiast
+Software Engineer • Backend Developer • Investment Enthusiast
 
 ---
 
-## 🌐 Vision
+# 🌍 Vision
 
-TradeLedger aims to become an all-in-one Investment Operating System for modern investors by combining portfolio management, trading journal, investment analytics, dividend tracking, and wealth-building tools into a single platform.
+TradeLedger aims to become an all-in-one Investment Operating System that helps investors manage portfolios, analyze investments, record trades, monitor dividends, and build long-term wealth through a modern and intuitive platform.
