@@ -113,24 +113,6 @@ Analyze portfolio performance, allocation, gain/loss, investment growth, and fin
 
 ---
 
-## 👑 Premium Membership
-
-Unlock premium investment features with subscription management and payment verification.
-
-### 💻 Desktop
-
-<p align="center">
-    <img src="docs/images/premium-desktop.png" width="100%">
-</p>
-
-### 📱 Mobile
-
-<p align="center">
-    <img src="docs/images/premium-mobile.png" width="320">
-</p>
-
----
-
 # 🏗 System Architecture
 
 ```text
